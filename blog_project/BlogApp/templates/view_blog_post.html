@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ blog_post.title }}</title>
+</head>
+<body>
+    <h1>{{ blog_post.title }}</h1>
+    <p>by {{ blog_post.author }} on {{ blog_post.created_at }}</p>
+    <p>{{ blog_post.content }}</p>
+    <a href="{% url 'edit_blog_post' blog_post.pk %}">Edit</a>
+    <a href="{% url 'delete_blog_post' blog_post.pk %}">Delete</a>
+    <a href="{% url 'list_blog_posts' %}">Back to list</a>
+</body>
+</html>
